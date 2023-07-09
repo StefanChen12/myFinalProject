@@ -9,6 +9,7 @@ let users = [];
 const isValid = (username)=>{ //returns boolean
 }
 
+// check if the user is authenticated
 const authenticatedUser = (username,password)=>{ //returns boolean
   let user = users.filter((user) => {
     return user.username == username && user.password == password;
@@ -18,7 +19,6 @@ const authenticatedUser = (username,password)=>{ //returns boolean
   }else {
     return false;
   }
-//write code to check if username and password match the one we have in records.
 }
 
 //only registered users can login

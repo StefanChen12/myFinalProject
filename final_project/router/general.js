@@ -5,6 +5,7 @@ let users = require("./auth_users.js").users;
 const public_users = express.Router();
 const fs = require('fs');
 
+// check if user exists
 const userExists = (username) => {
   let user = [];
   user = users.filter((user) => {
@@ -17,7 +18,7 @@ const userExists = (username) => {
   }
 }
 
-// use promise to get books
+// use promise to get books(task 14)
 let readingBooks = new Promise((res, rej) => {
   setTimeout(() => {
     res(books);
